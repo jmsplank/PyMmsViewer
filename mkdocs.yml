@@ -1,2 +1,21 @@
 site_name: pymmsviewer
-theme: readthedocs
+theme:
+    name: "material"
+
+nav:
+- Home: index.md
+- Reference:
+    - Loader: loader.md
+    - LASP API: lasp_api.md
+    - Interface: interface.md
+    - Plotter: plotter.md
+
+plugins:
+- search
+- mkdocstrings:
+    handlers:
+        python:
+            paths: [.]
+            options:
+                docstring-style: google
+                show-source: no
